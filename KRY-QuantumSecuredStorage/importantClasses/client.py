@@ -6,12 +6,10 @@ rendezvous = ('192.168.64.154', 55555)
 
 # connect to rendezvous
 print('connecting to rendezvous server')
-peerToPeerPort = 5033
-str_val = str(peerToPeerPort )
-byte_val = str_val.encode()
+
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.bind(('0.0.0.0', 50006))
-sock.sendto(byte_val, rendezvous)
+sock.bind(('0.0.0.0', 50001))
+sock.sendto(b'0', rendezvous)
 
 while True:
     data = sock.recv(1024).decode()
@@ -35,6 +33,7 @@ print('  dest port:   {}\n'.format(dport))
 print('punching hole')
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+#sock.bind(('0.0.0.0', sport))
 sock.sendto(b'0', (ip, dport))
 
 print('ready to exchange messages\n')
@@ -56,16 +55,16 @@ def sendDeleteFileCommand(name):
     return "CreateFile;"+name+";"+data
 
 def sendCreateFileCommand(name,format):
-    if format=="txt":
+    if format==".txt":
         data=getDataTextUserInput()
-        return "CreateFile;"+name+";"+format+";"+"testString"
+        return "CreateFile;"+name+";"+format+";"+data
 
 def getDataTextUserInput():
     data = input('> ')
     return data
 
 #def sendDownloadFileCommand():
-
+    
 
 #def sendUploadFileCommand():
 
@@ -84,6 +83,6 @@ sock.bind(('0.0.0.0', dport))
 
 while True:
     msg = input('> ')
-    format="txt"
+    format=".txt"
     dataToSend=sendCreateFileCommand(msg,format)
     sock.sendto(dataToSend.encode(), (ip, sport))
