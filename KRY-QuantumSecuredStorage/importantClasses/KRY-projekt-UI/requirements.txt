@@ -1,0 +1,8 @@
+numpy
+sympy
+pyldpc==0.7.9
+pyspx
+pyzipper
+mkdocs
+mkdocs-material
+pylint

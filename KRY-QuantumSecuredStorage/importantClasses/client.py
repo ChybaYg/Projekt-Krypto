@@ -2,7 +2,7 @@ import socket
 import sys
 import threading
 
-rendezvous = ('192.168.64.154', 55555)
+rendezvous = ('100.64.129.130', 55555)
 
 # connect to rendezvous
 print('connecting to rendezvous server')
@@ -52,7 +52,7 @@ def listen():
 def sendDeleteFileCommand(name):
 
     data=getDataTextUserInput()
-    return "CreateFile;"+name+";"+data
+    return "DeleteFile;"+name+";"+data
 
 def sendCreateFileCommand(name,format):
     if format==".txt":
@@ -68,7 +68,7 @@ def getDataTextUserInput():
 
 #def sendUploadFileCommand():
 
-#def sendMoveFileCommand():
+
 
 #def sendEditFileCommand():
 

@@ -4,7 +4,7 @@ import threading
 import shutil
 import os
 
-rendezvous = ('192.168.64.154', 55555)
+rendezvous = ('100.64.129.130', 55555)
 
 # connect to rendezvous
 print('connecting to rendezvous server')
