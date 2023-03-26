@@ -52,21 +52,31 @@ def listen():
 def sendDeleteFileCommand(name):
 
     data=getDataTextUserInput()
-    return "DeleteFile;"+name+";"+data
+    return ("DeleteFile;"+name+";"+data).encode()
 
-def sendCreateFileCommand(name,format):
-    if format==".txt":
-        data=getDataTextUserInput()
-        return "CreateFile;"+name+";"+format+";"+data
+def sendCreateFileCommand(name):
+    data=getDataTextUserInput()
+    return ("CreateFile;"+name+";"+data).encode()
 
 def getDataTextUserInput():
     data = input('> ')
     return data
 
-#def sendDownloadFileCommand():
-    
+def sendDownloadFileCommand(path):
+    return ("DownloadFile;" + path + ";" "nothing else matter").encode()
 
-#def sendUploadFileCommand():
+def sendUploadFileCommand(pathFrom):
+    fileData=open(pathFrom, "rb")
+    name,format=pathFrom.split("\\")[-1].split(".")
+    return ("CreateFile;" + name + ";" + fileData).encode()
+
+def sendEditFileCommand(path):
+    downloadCommand=sendDownloadFileCommand(path)
+    sock.sendto(downloadCommand.encode(), (ip, sport))
+    data = sock.recv(1024).encode()
+    #editedData=showDataInUIEditorWhichAllowsEditing
+    #return ("CreateFile;" + name + ";" + editedData).encode()
+
 
 
 
@@ -83,6 +93,6 @@ sock.bind(('0.0.0.0', dport))
 
 while True:
     msg = input('> ')
-    format=".txt"
     dataToSend=sendCreateFileCommand(msg,format)
-    sock.sendto(dataToSend.encode(), (ip, sport))
+
+    sock.sendto(dataToSend, (ip, sport))

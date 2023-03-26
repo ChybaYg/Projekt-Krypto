@@ -47,6 +47,10 @@ def delFileOrDir(x):
     shutil.rmtree(x)
     return returnDirectoryInfo()
 
+def delFile(x):
+    shutil.rmtree(x)
+    return returnDirectoryInfo()
+
 def createDir(x):
     os.mkdir(x)
     return returnDirectoryInfo()
@@ -63,9 +67,16 @@ def createFileText(x, data):
     f.close()
     return returnDirectoryInfo()
 
+#def sendFile(name):
+
+
 def moveFile(x,y):
     os.replace(x, y)
     return returnDirectoryInfo()
+
+def getFile(path):
+    data = open(path, "rb")
+    return data
 
 def respGot(functionName, params,format,data):
     currentDirInfo=""
@@ -77,13 +88,12 @@ def respGot(functionName, params,format,data):
         currentDirInfo=createFileText("Uloziste/"+params+format, data)
 
     if functionName=="DeleteFile":
-        currentDirInfo=createFileText("Uloziste/"+params+format, data)
+        currentDirInfo=delFile("Uloziste/"+params)
 
     if functionName=="DownloadFile":
-        currentDirInfo=createFileText("Uloziste/"+params+format, data)
-
-    if functionName=="UploadFile":
-        currentDirInfo=createFileText("Uloziste/"+params+format, data)
+        fileData=getFile("Uloziste/"+params)
+        sock.sendto(fileData, (ip, sport))
+        currentDirInfo =returnDirectoryInfo()
 
     if functionName=="EditFile":
         currentDirInfo=createFileText("Uloziste/"+params+format, data)
