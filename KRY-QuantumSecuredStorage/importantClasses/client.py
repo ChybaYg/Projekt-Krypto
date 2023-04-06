@@ -2,8 +2,11 @@ import socket
 import sys
 import threading
 
-rendezvous = ('100.64.129.130', 55555)
+from importantClasses.ConnectionObject import ConnectionObject
 
+rendezvous = ('100.64.129.130', 55555)
+connectionInfo=ConnectionObject("User","TajneHeslo")
+hostname, hashedPassword = "user", "hashedPassword"
 # connect to rendezvous
 print('connecting to rendezvous server')
 
@@ -40,19 +43,24 @@ print('ready to exchange messages\n')
 
 # listen for
 # equiv: nc -u -l 50001
+def connect(hostname,hashedPassword,connectionInfo):
+    request = ("Validate"+";"+hostname+";"+hashedPassword).encode()
+    sock.sendto(request, (ip, sport))
+    connectionInfo.connected = sock.recv(1024).decode().Split(";")[1]
+
 def listen():
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.bind(('0.0.0.0', sport))
 
     while True:
+        if connectionInfo.connected==False:
+            connect(hostname, hashedPassword,connectionInfo)
         data = sock.recv(1024)
         print('\rpeer: {}\n> '.format(data.decode()), end='')
 
 
 def sendDeleteFileCommand(name):
-
-    data=getDataTextUserInput()
-    return ("DeleteFile;"+name+";"+data).encode()
+    return ("DeleteFile;"+name).encode()
 
 def sendCreateFileCommand(name):
     data=getDataTextUserInput()
@@ -72,8 +80,8 @@ def sendUploadFileCommand(pathFrom):
 
 def sendEditFileCommand(path):
     downloadCommand=sendDownloadFileCommand(path)
-    sock.sendto(downloadCommand.encode(), (ip, sport))
-    data = sock.recv(1024).encode()
+    sock.sendto(downloadCommand, (ip, sport))
+    data = sock.recv(1024).decode()
     #editedData=showDataInUIEditorWhichAllowsEditing
     #return ("CreateFile;" + name + ";" + editedData).encode()
 
@@ -94,5 +102,4 @@ sock.bind(('0.0.0.0', dport))
 while True:
     msg = input('> ')
     dataToSend=sendCreateFileCommand(msg,format)
-
     sock.sendto(dataToSend, (ip, sport))

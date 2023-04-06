@@ -5,7 +5,7 @@ import shutil
 import os
 
 rendezvous = ('100.64.129.130', 55555)
-
+validated=False
 # connect to rendezvous
 print('connecting to rendezvous server')
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -78,8 +78,14 @@ def getFile(path):
     data = open(path, "rb")
     return data
 
-def respGot(functionName, params,format,data):
+def respGot(functionName, params, format, data, validated):
     currentDirInfo=""
+    if functionName=="Validate":
+        validated=True
+        return True
+
+    if validated==False:
+        return "NotValidated"
     if functionName=="Move":
         fromPlace,toPlace=params.split(',')
         currentDirInfo=moveFile(fromPlace,toPlace)
