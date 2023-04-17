@@ -21,7 +21,7 @@ Once the virtual machine is installed:
 	- Win+R -> CMD -> ipconfig
 	
 Note: If the 3) does not work through command line try this bellow (for PyCharm) <br>
-Open IDE -> File -> Settings -> PQCS -> Python Interpereter -> "+" -> Type name of library -> Install Package
+	- Open IDE -> File -> Settings -> PQCS -> Python Interpereter -> "+" -> Type name of library -> Install Package
 
 --------------------------------------------------------------------------------------------------------------
 
