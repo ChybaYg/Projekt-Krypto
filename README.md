@@ -12,13 +12,13 @@ Application is programmed in a Python 3.11.
 
 To run application, it is necessary to have a Windows 11 virtual machine installed.
 
-Once the virtual machine is installed,
-	1) Install a Python 3.11.
-	2) Install IDE (recommended PyCharm 2022.3.3)
-	3) Install all neccesarry libraries in the Requirements.txt file
-		- Win+R -> CMD -> pip -install r requirements.txt
-	4) Check the IPv4 of the virtual machine and noted it down
-		- Win+R -> CMD -> ipconfig
+Once the virtual machine is installed:
+1) Install a Python 3.11.
+2) Install IDE (recommended PyCharm 2022.3.3)
+3) Install all neccesarry libraries in the Requirements.txt file
+	- Win+R -> CMD -> pip -install r requirements.txt
+4) Check the IPv4 of the virtual machine and noted it down
+	- Win+R -> CMD -> ipconfig
 	
 Note: If the 3) does not work through command line try this bellow (for PyCharm)
 Open IDE -> File -> Settings -> PQCS -> Python Interpereter -> "+" -> Type name of library -> Install Package
