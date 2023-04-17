@@ -20,7 +20,7 @@ Once the virtual machine is installed:
 4) Check the IPv4 of the virtual machine and noted it down
 	- Win+R -> CMD -> ipconfig
 	
-Note: If the 3) does not work through command line try this bellow (for PyCharm) <br>
+Note: If the 3) does not work through command line try this bellow (for PyCharm)/
 	- Open IDE -> File -> Settings -> PQCS -> Python Interpereter -> "+" -> Type name of library -> Install Package
 
 --------------------------------------------------------------------------------------------------------------
@@ -37,7 +37,7 @@ Setting up a communication
 
 Login to a storage
 
-Once a login form is shown, there is only one User that have access to his own a storage
+Once a login form is shown, there is only one User that have access to his own a storage/
 	- username - cryptogod
 	- password - Fre3W!lly*
 
