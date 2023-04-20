@@ -45,6 +45,8 @@ Login to a storage
 
 Now you are signed in into a storage of user cryptogod. There are multiple functions that you can try!
 
+Note: To see changes in storage you need to click "home" button after applying functions(upload, download or delete)
+
 
 --------------------------------------------------------------------------------------------------------------
 
