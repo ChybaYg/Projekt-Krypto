@@ -16,6 +16,7 @@ keyAES = b''
 ivAES = b''
 
 # Nastavení ip_address adresy a portu serveru
+# Zde je nutné změnit adresu randevous server
 rendezvous = ('192.168.184.128', 55555)
 
 # Připojení na server
