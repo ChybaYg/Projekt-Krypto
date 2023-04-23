@@ -25,6 +25,8 @@ Steps to do:
 	
 Note: If the 3) does not work through command line try this bellow (for PyCharm) <br>
  - Open IDE -> File -> Settings -> Project:Project -> Python Interpereter -> "+" -> Type name of library -> Install Package
+ - When installing the pycryptodome library, it is possible that the library is installed as 'Cryptodome' or 'Crypto' 
+in the Python libraries folder. In this case, it is necessary to modify the part of the code with imports to the appropriate libraries.
 
 --------------------------------------------------------------------------------------------------------------
 
