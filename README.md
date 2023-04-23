@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------------------------------------
- 						SECURED STORAGE
+ 							SECURED STORAGE
 --------------------------------------------------------------------------------------------------------------
 
 The application is working like peer-to-peer communication, but for the setting a comunication between clients
