@@ -162,7 +162,7 @@ class MainWindow(QWidget):
         self.homeButton.setText(_translate("main_window", "HOME"))
         self.downloadButton.setText(_translate("main_window", "DOWNLOAD"))
         self.deleteButton.setText(_translate("main_window", "DELETE FILE"))
-        self.infoButton.setText(_translate("main_window", "ABOUT US"))
+        self.infoButton.setText(_translate("main_window", "ABOUT"))
         self.signOutButton.setText(_translate("main_window", "SIGN OUT"))
         self.uploadButton.setText(_translate("main_window", "UPLOAD"))
 
@@ -273,7 +273,7 @@ class MainWindow(QWidget):
         self.frameInfo.setStyleSheet("QLabel{color:white}")
         self.frameInfo.setAlignment(QtCore.Qt.AlignCenter)
         self.frameInfo.setObjectName("label")
-        self.frameInfo.setText("About us\nTBD")
+        self.frameInfo.setText("About us\nThis project is beta version of secured storage.\nUnstable version v1.0")
         self.verticalLayout_2.addWidget(self.frameInfo)
 
     # Metoda, která vymaže obsah zobrazeného okna
