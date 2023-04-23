@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------------------------------------
- 						POSTQUANTUM CRYPTOGRAPHY STORAGE
+ 						SECURED STORAGE
 --------------------------------------------------------------------------------------------------------------
 
 The application is working like peer-to-peer communication, but for the setting a comunication between clients
@@ -42,7 +42,7 @@ Login to a storage
 1) Once a login form is shown, there are two users that have access to the storage <br>
 	 - username: Admin <br>
 	 - password: admin <br>
-	  <br>
+2)  <br>
 	 - username: User <br>
 	 - password: 123
 
