@@ -16,7 +16,7 @@ Once the virtual machine is installed:
 1) Install a Python 3.11.
 2) Install IDE (recommended PyCharm 2022.3.3)
 3) Install all neccesarry libraries in the Requirements.txt file
-	- Win+R -> CMD -> pip -install r requirements.txt
+	- Win+R -> CMD -> pip -install -r requirements.txt
 4) Check the IPv4 of the virtual machine and noted it down
 	- Win+R -> CMD -> ipconfig
 	
