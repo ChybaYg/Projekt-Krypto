@@ -99,7 +99,7 @@ class ConnectWindow(object):
     def retranslateUi(self, connectWindow):
         _translate = QtCore.QCoreApplication.translate
         connectWindow.setWindowTitle(_translate("connect_window", "Establishment of a connection"))
-        self.adressLabel.setText(_translate("connect_window", "Enter IP address and port_server of randezvous server"))
+        self.adressLabel.setText(_translate("connect_window", "Enter IP address and port of randezvous server"))
         self.label_2.setText(_translate("connect_window", ":"))
         self.portLine.setPlaceholderText(_translate("connect_window", "Port"))
         self.connectButton.setText(_translate("connect_window", "Connect"))
