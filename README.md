@@ -42,7 +42,6 @@ Login to a storage
 1) Once a login form is shown, there are two users that have access to the storage <br>
 	 - username: Admin <br>
 	 - password: admin <br>
-2)  <br>
 	 - username: User <br>
 	 - password: 123
 
