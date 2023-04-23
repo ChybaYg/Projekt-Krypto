@@ -48,13 +48,17 @@ Login to a storage
 
 --------------------------------------------------------------------------------------------------------------
 
-Now you are signed in into a storage of user cryptogod. There are multiple functions that you can try!
+Now you are signed in into a storage of one of the users. There are multiple functions that you can try!
 
-Note: To see changes in storage you need to double click "home" button after applying functions(upload, download or delete)
+Note: To see changes in storage you need to double click "home" button after applying functions (upload or delete)
 
 
 --------------------------------------------------------------------------------------------------------------
 
 Logs
+
+After every opperation every action is saved into a log file in admins storage. Hash of this log file(Logs.txt) is stored 
+in another file (hash_logs.txt). Admin can easily verify and compare log file with hash of this file to see if there were any changes
+in the log file
 
 --------------------------------------------------------------------------------------------------------------
