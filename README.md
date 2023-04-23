@@ -10,18 +10,19 @@ Preparations
 
 Application is programmed in a Python 3.11.
 
-To run application, it is necessary to have a Windows 11 virtual machine installed.
+To run application, it is necessary to have two PCs in one network or have a Windows 11 virtual machine installed on your PC.
+The PCs need to communicate between each other.
 
-Once the virtual machine is installed:
+Steps to do:
 1) Install a Python 3.11.
-2) Install IDE (recommended PyCharm 2022.3.3)
-3) Install all neccesarry libraries in the Requirements.txt file
-	- Win+R -> CMD -> pip -install r requirements.txt
-4) Check the IPv4 of the virtual machine and noted it down
+2) Optional - Install IDE (recommended PyCharm 2022.3.3)
+3) Install all neccesarry libraries in the requirements.txt file
+	- Win+R -> CMD -> pip install -r requirements.txt
+4) Check the IPv4 of the second PC/virtual machine and noted it down
 	- Win+R -> CMD -> ipconfig
 	
 Note: If the 3) does not work through command line try this bellow (for PyCharm) <br>
- - Open IDE -> File -> Settings -> PQCS -> Python Interpereter -> "+" -> Type name of library -> Install Package
+ - Open IDE -> File -> Settings -> Project:Project -> Python Interpereter -> "+" -> Type name of library -> Install Package
 
 --------------------------------------------------------------------------------------------------------------
 
@@ -29,23 +30,28 @@ Setting up a communication
 
 1) Start a server.py
 2) Start a storage.py
-3) Lastly start a client.py
-	- now it is neccesarry to insert a IPv4 address of the virtual machine and experimental port "55555"
+	- there is neccesary to change the server address on line 20 with the IPv4 address from step 4)
+3) Lastly start a App.py (this is client application)
+	- now it is neccesarry to insert a IPv4 address of the server and experimental port "55555"
 	- succesfull connection is after login form is displayed
 
 --------------------------------------------------------------------------------------------------------------
 
 Login to a storage
 
-1) Once a login form is shown, there is only one User that have access to his own a storage <br>
-	 - username: cryptogod <br>
-	 - password: Fre3W!lly*
+1) Once a login form is shown, there are two users that have access to the storage <br>
+	 - username: Admin <br>
+	 - password: admin <br>
+	  <br>
+	 - username: User <br>
+	 - password: 123
+
 
 --------------------------------------------------------------------------------------------------------------
 
 Now you are signed in into a storage of user cryptogod. There are multiple functions that you can try!
 
-Note: To see changes in storage you need to click "home" button after applying functions(upload, download or delete)
+Note: To see changes in storage you need to double click "home" button after applying functions(upload, download or delete)
 
 
 --------------------------------------------------------------------------------------------------------------
