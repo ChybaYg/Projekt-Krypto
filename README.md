@@ -50,6 +50,7 @@ Login to a storage
 --------------------------------------------------------------------------------------------------------------
 
 Now you are signed in into a storage of one of the users. There are multiple functions that you can try!
+In Client App/Test_files directory you can find testing files to test the storage functionality.
 
 Note: To see changes in storage you need to double click "home" button after applying functions (upload or delete)
 
