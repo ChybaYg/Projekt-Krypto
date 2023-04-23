@@ -3,8 +3,8 @@ import json
 import socket
 import threading
 
-from Cryptodome.Cipher import AES
-from Cryptodome.Util.Padding import pad
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import pad
 from pynewhope import newhope
 
 # Inicializace globálních proměnných a konstanty BUFFER_SIZE
