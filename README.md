@@ -3,7 +3,8 @@
 --------------------------------------------------------------------------------------------------------------
 
 The application is working like peer-to-peer communication, but for the setting a comunication between clients
-is used server. Server is working on virtual machine with a storage client.
+is used server. Server is working on virtual machine with a storage client. The storage can store files max. to 65kB 
+and text files in format *.txt
 
 --------------------------------------------------------------------------------------------------------------
 Preparations
